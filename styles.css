@@ -256,3 +256,49 @@ img {
   .demo:hover {
     opacity: 1;
   }
+/* Style for the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-info,
+  .social-media,
+  .location {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info h3,
+  .social-media h3,
+  .location h3 {
+    font-size: 18px;
+  }
+  
+  .contact-info img {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+  }
+  
+  .social-media img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+  }
+  
+  .location iframe {
+    width: 70%;
+    height: 150;
+    margin-top: 10px;
+  }
+  
