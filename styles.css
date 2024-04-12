@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Itim'
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a90e2; /* เปลี่ยนเป็นสีฟ้า */
+    color: #fff;
+    padding: 10px 20px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    margin-right: 10px; /* ระยะห่างระหว่างข้อความกับ logo */
+    font-weight: bold;
+}
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* เพิ่ม transition เพื่อทำให้การเปลี่ยนสีมีการเฟ้นหา */
+}
+
+.menu ul li a:hover {
+    color: #ffcc00; /* เปลี่ยนสีเมื่อเมาส์ชี้ */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content {
+    padding: 20px;
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+/* เพิ่มสไลด์เป็นการแสดงผลจากซ้ายไปขวา */
+.fade {
+    animation: fade 3s linear infinite;
+}
+.services-text h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    text-align: center; /* จัดตำแหน่งให้กลาง */
+}
+
+.services-text p {
+    font-size: 24px; /* ปรับขนาดตัวหนังสือใหญ่ */
+    color: #666;
+    text-align: center; /* จัดตำแหน่งให้กลาง */
+}
+
+.services-text p:last-child {
+    font-weight: bold;
+    color: #4a90e2;
+    text-align: center; /* จัดตำแหน่งให้กลาง */
+}
+
+/* CSS สำหรับสินค้าและบริการ */
+.products-services {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.products-services h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* แบ่งเป็น 2 columns */
+    gap: 20px; /* ระยะห่างระหว่าง grid items */
+
+}
+
+.grid-item img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain; /* ใช้ object-fit: contain เพื่อปรับขนาดรูปภาพให้ไม่เกินขอบเขตของ grid item */
+}
+
+.grid-item p {
+    font-size: 24px;
+    color: #666;
+    margin-top: 10px; /* ระยะห่างของข้อความกับรูป */
+}
+@media screen and (max-width: 600px) {
+    .grid-item img {
+        max-width: 100%; /* ให้รูปภาพไม่เกินความกว้างของ grid item */
+        height: auto; /* คำนึงถึงอัตราส่วน */
+        object-fit: contain; /* ให้รูปภาพปรับขนาดเพื่อไม่ขยับขึ้น */
+    }
+}
+@keyframes fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+/* CSS สำหรับส่วนของผลงาน */
+.portfolio {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+    max-width: 70%; /* ปรับค่า max-width ตามที่ต้องการ */
+    margin: auto; /* จะช่วยให้ container อยู่ตรงกลางของหน้าจอ */
+  }
+  
+  /* Hide the images by default */
+  .myProfile {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
