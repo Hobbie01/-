@@ -1,7 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Itim'
+    font-family: 'Itim';
+    background-color: #0E00B2;
+    color: yellow !important; /* เปลี่ยนสีตัวอักษรทั้งหมดใน body เป็นสีเหลือง */
+
 }
 
 nav {
@@ -80,29 +83,26 @@ nav {
 }
 
 .mySlides {
-    display: none;
+    display: block;
 }
 
 /* เพิ่มสไลด์เป็นการแสดงผลจากซ้ายไปขวา */
 .fade {
-    animation: fade 3s linear infinite;
+    /* animation: fade 3s linear infinite; */
 }
 .services-text h2 {
     font-size: 36px;
     font-weight: bold;
-    color: #333;
     text-align: center; /* จัดตำแหน่งให้กลาง */
 }
 
 .services-text p {
     font-size: 24px; /* ปรับขนาดตัวหนังสือใหญ่ */
-    color: #666;
     text-align: center; /* จัดตำแหน่งให้กลาง */
 }
 
 .services-text p:last-child {
     font-weight: bold;
-    color: #4a90e2;
     text-align: center; /* จัดตำแหน่งให้กลาง */
 }
 
@@ -115,7 +115,6 @@ nav {
 .products-services h2 {
     font-size: 36px;
     font-weight: bold;
-    color: #333;
 }
 
 .grid-container {
@@ -133,7 +132,6 @@ nav {
 
 .grid-item p {
     font-size: 24px;
-    color: #666;
     margin-top: 10px; /* ระยะห่างของข้อความกับรูป */
 }
 @media screen and (max-width: 600px) {
@@ -158,7 +156,6 @@ nav {
 .portfolio h2 {
     font-size: 36px;
     font-weight: bold;
-    color: #333;
 }
 
 .gallery {
@@ -223,7 +220,6 @@ img {
   
   /* Number text (1/3 etc) */
   .numbertext {
-    color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
@@ -237,6 +233,7 @@ img {
     padding: 2px 16px;
     color: white;
   }
+  
   
   .row:after {
     content: "";
